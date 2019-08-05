@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: collection
-# Generation Time: 2019-08-05 09:21:21 +0000
+# Generation Time: 2019-08-05 10:32:55 +0000
 # ************************************************************
 
 
@@ -27,12 +27,12 @@ DROP TABLE IF EXISTS `monsters`;
 
 CREATE TABLE `monsters` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(255) DEFAULT NULL,
-  `element` varchar(255) DEFAULT NULL,
-  `healthpoints` varchar(255) DEFAULT NULL,
-  `strength` varchar(255) DEFAULT NULL,
-  `agility` varchar(255) DEFAULT NULL,
-  `armour` int(11) DEFAULT NULL,
+  `type` varchar(255) NOT NULL DEFAULT '?',
+  `element` varchar(255) NOT NULL DEFAULT 'Unaffiliated',
+  `healthpoints` int(11) DEFAULT '0',
+  `strength` int(11) DEFAULT '0',
+  `agility` int(11) DEFAULT '0',
+  `armour` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,9 +41,9 @@ LOCK TABLES `monsters` WRITE;
 
 INSERT INTO `monsters` (`id`, `type`, `element`, `healthpoints`, `strength`, `agility`, `armour`)
 VALUES
-	(1,'Goblin','Earth','12','6','14',2),
-	(2,'Slime','Earth','2','1','4',0),
-	(3,'Ancient lobster','Water','70','28','12',30);
+	(1,'Goblin','Earth',12,6,14,2),
+	(2,'Slime','Earth',2,1,4,0),
+	(3,'Ancient lobster','Water',70,28,12,30);
 
 /*!40000 ALTER TABLE `monsters` ENABLE KEYS */;
 UNLOCK TABLES;
