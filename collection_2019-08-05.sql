@@ -31,17 +31,17 @@ CREATE TABLE `monsters` (
   `element` varchar(255) NOT NULL DEFAULT 'Unaffiliated',
   `healthpoints` int(11) NOT NULL DEFAULT '0',
   `strength` int(11) NOT NULL DEFAULT '0',
-  `Speed` int(11) NOT NULL DEFAULT '0',
+  `speed` int(11) NOT NULL DEFAULT '0',
   `agility` int(11) NOT NULL DEFAULT '0',
   `armour` int(11) NOT NULL DEFAULT '0',
-  `Intelligence` int(11) NOT NULL DEFAULT '0',
+  `intelligence` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `monsters` WRITE;
 /*!40000 ALTER TABLE `monsters` DISABLE KEYS */;
 
-INSERT INTO `monsters` (`id`, `type`, `element`, `healthpoints`, `strength`, `Speed`, `agility`, `armour`, `Intelligence`)
+INSERT INTO `monsters` (`id`, `type`, `element`, `healthpoints`, `strength`, `speed`, `agility`, `armour`, `intelligence`)
 VALUES
 	(1,'Goblin','Earth',16,10,16,14,2,50),
 	(2,'Slime','Earth',3,2,1,4,0,0),
