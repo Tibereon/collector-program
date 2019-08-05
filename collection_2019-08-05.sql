@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: collection
-# Generation Time: 2019-08-05 14:45:07 +0000
+# Generation Time: 2019-08-05 15:06:45 +0000
 # ************************************************************
 
 
@@ -34,7 +34,7 @@ CREATE TABLE `monsters` (
   `agility` int(11) NOT NULL DEFAULT '0',
   `armour` int(11) NOT NULL DEFAULT '0',
   `intelligence` int(11) NOT NULL DEFAULT '0',
-  `element` varchar(255) DEFAULT NULL,
+  `element` enum('Earth','Water','Earth/Humid','Earth/Arid','Corruption','Poison','Fire','Air','Unaffiliated') DEFAULT 'Unaffiliated',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
