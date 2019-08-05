@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: collection
-# Generation Time: 2019-08-05 12:21:53 +0000
+# Generation Time: 2019-08-05 13:58:12 +0000
 # ************************************************************
 
 
@@ -58,7 +58,28 @@ VALUES
 	(13,'Devourer','Courruption',320,80,34,16,8,10),
 	(14,'Eater of worlds','Corruption',240,100,85,35,6,14),
 	(15,'Flying polp','Unaffiliated',540,280,130,60,0,110),
-	(16,'?','Unaffiliated',0,0,0,0,0,0);
+	(16,'Walking-shark','Water',200,70,14,2,1,12),
+	(17,'Fire-elemental','Fire',80,400,40,50,0,120),
+	(18,'Glowing-lizard','Fire',18,28,12,14,3,6),
+	(19,'Giant arachnid','Poision ',20,18,18,16,6,20),
+	(20,'stone-golem','Earth',1000,350,6,1,300,30),
+	(21,'Bull-toad','Earth',50,40,42,12,1,6),
+	(22,'Merman','Water',34,58,20,22,0,105),
+	(23,'Dark-elf','Posion ',24,32,32,36,0,95),
+	(24,'Orc','Earth',60,70,28,22,2,80),
+	(25,'Scorpion ','Earth/Arid',20,12,14,6,8,4),
+	(26,'Huge-fly','Posion',200,22,110,40,1,2),
+	(27,'Wraith','Corruption',34,48,24,20,28,80),
+	(28,'Antlion','Earth/arid',38,50,28,8,20,10),
+	(29,'Dragon','Air',3000,320,140,48,20,150),
+	(30,'King slime','Earth',10000,120,20,8,0,40),
+	(31,'Beastman','Poison',40,52,32,28,1,60),
+	(32,'Vampire','Corruption',200,90,46,42,0,125),
+	(33,'Cockroach-man','Unaffiliated',140,110,60,50,8,100),
+	(34,'Evil-natural water','Water',1,1000,200,100,0,60),
+	(35,'Harpy','Air',30,20,60,64,3,70),
+	(36,'Subterranean mole man','Earth',80,120,20,32,8,115),
+	(37,'Angry-bread loaf','Unaffiliated',2,2,5,1,2,200);
 
 /*!40000 ALTER TABLE `monsters` ENABLE KEYS */;
 UNLOCK TABLES;
