@@ -14,33 +14,8 @@ body {
 
 .Hero-container {
     width: 100%;
-    border: 3px solid #EAF2E3;
+    border: 3px solid #FF0800;
     text-align: center;
-}
-
-.top-forms {
-    width: 100%;
-    border: 2px solid #B70B39;
-    text-align: center;
-    float: left;
-}
-
-.basic-form {
-    float: left;
-    margin: 0 2px 0 0;
-}
-
-.form-text {
-    float: left;
-    margin: 0 2px 0 0;
-    padding: 0 0 0 80px;
-}
-
-.stat-form-box {
-    width: 70%;
-    border: 2px solid #B70B39;
-    float: right;
-    overflow: auto;
 }
 
 .wrapper {
@@ -48,14 +23,6 @@ body {
     border: 1px solid #B1CB39;
     padding: 2px 2px 2px 2px;
     margin: 1px 2px 0 0;
-}
-
-.stat-form {
-    float: right;
-}
-
-.stat-form-text {
-    float: left;
 }
 
 .monsters {

@@ -48,60 +48,6 @@ function displayMonster($Monsterstats) {
                 <h1 class="Hero">Monster collection</h1>
             </div>
         </header>
-        <div class="top-forms">
-            <p class="form-text"> Add monster type </p><form class="basic-form" action="index.php" method="get">
-                <input type="text" name="id">
-                <input type="submit">
-            </form>
-            <p class="form-text"> Add monster element </p><form class="basic-form" action="index.php" method="get">
-                <input type="text" name="id">
-                <input type="submit">
-            </form>
-        </div>
-        <div class="stat-form-box">
-            <div class="wrapper">
-                <form class="stat-form-form" action="index.php" method="get">
-                    <input type="text" name="id">
-                    <input type="submit">
-                    <p class="stat-form-text">Healthpoints</p>
-                </form>
-            </div>
-            <div class="wrapper">
-                <form class="stat-form-form" action="index.php" method="get">
-                    <input type="text" name="id">
-                    <input type="submit">
-                    <p class="stat-form-text">strength</p>
-                </form>
-            </div>
-            <div class="wrapper">
-                <form class="stat-form-form" action="index.php" method="get">
-                    <input type="text" name="id">
-                    <input type="submit">
-                    <p class="stat-form-text">speed</p>
-                </form>
-            </div>
-            <div class="wrapper">
-                <form class="stat-form-form" action="index.php" method="get">
-                    <input type="text" name="id">
-                    <input type="submit">
-                    <p class="stat-form-text">agilty</p>
-                </form>
-            </div>
-            <div class="wrapper">
-                <form class="stat-form-form" action="index.php" method="get">
-                    <input type="text" name="id">
-                    <input type="submit">
-                    <p class="stat-form-text">armour</p>
-                </form>
-            </div>
-            <div class="wrapper">
-                <form class="stat-form-form" action="index.php" method="get">
-                    <input type="text" name="id">
-                    <input type="submit">
-                    <p class="stat-form-text">intelligence</p>
-                </form>
-            </div>
-        </div>
     <section class="monsters">
         <?php
         foreach($monsterArray as $item) {
