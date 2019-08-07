@@ -1,7 +1,6 @@
 <?php
 $monsterArray = [];
 
-if (isset($_GET['id'])) {
     $db = new PDO(
         'mysql:host=192.168.20.20; dbname=collection',
         'root',
@@ -13,29 +12,34 @@ if (isset($_GET['id'])) {
         PDO::FETCH_ASSOC
     );
 
-    $idToSearchFor = $_GET['id'];
+    $idToSearchFor = $_GET;
 
     $sql = $db->prepare(
         'SELECT * FROM `monsters`;'
     );
 
-    $sql->bindParam(
-        'id',
-        $idToSearchFor,
-        PDO::PARAM_INT
-    );
-
     $sql->execute();
 
     $monsterArray = $sql->fetchAll();
-}
 
-function displayMonster($Monsterstats) {
-    echo $Monsterstats [0]['type'];
-}
+    function createCards($monsterArray) {
+        foreach($monsterArray as $item) {
+            echo '<div class="card-container">';
+                echo '<div class="card">';
+                    echo '<div class="card-title">' . $item['type'] . '</div>';
+                    echo '<div class="card-text">Element = '  . $item['element'] . '</div>';
+                    echo '<div class="card-text">Healthpoints = '  . $item['healthpoints'] . '</div>';
+                    echo '<div class="card-text">Strength = '  . $item['strength'] . '</div>';
+                    echo '<div class="card-text">Speed = ' . $item['speed'] . '</div>';
+                    echo '<div class="card-text">Agilty = ' . $item['agility'] . '</div>';
+                    echo '<div class="card-text">Armour = ' . $item['armour'] . '</div>';
+                    echo '<div class="card-text">Intelligence = '  . $item['intelligence'] . '</div>';
+                echo '</div>';
+            echo '</div>';
+        }
+    }
 
 ?>
-
 <html lang="en">
     <head>
         <title>Monster collection</title>
@@ -49,22 +53,7 @@ function displayMonster($Monsterstats) {
             </div>
         </header>
     <section class="monsters">
-        <?php
-        foreach($monsterArray as $item) {
-        echo '<div class="card-container">';
-            echo '<div class="card">';
-                echo '<div class="card-title">' . $item['type'] . '</div>';
-                echo '<div class="card-text">Element = '  . $item['element'] . '</div>';
-                echo '<div class="card-text">Healthpoints = '  . $item['healthpoints'] . '</div>';
-                echo '<div class="card-text">Strength = '  . $item['strength'] . '</div>';
-                echo '<div class="card-text">Speed = ' . $item['speed'] . '</div>';
-                echo '<div class="card-text">Agilty = ' . $item['agility'] . '</div>';
-                echo '<div class="card-text">Armour = ' . $item['armour'] . '</div>';
-                echo '<div class="card-text">Intelligence = '  . $item['intelligence'] . '</div>';
-                echo '</div>';
-            echo '</div>';
-        }
-        ?>
+        <?php createCards($monsterArray) ?>
     </section>
     </body>
 </html>
