@@ -22,19 +22,14 @@ class IndexTest extends TestCase
         $this->assertEquals($expectedResult, $result);
     }
 
-    public function gracefulFailure_incorrectEntry()
+    public function testMonsters_hasValues()
     {
-        //Setup
-        $expectedResult =  'Incorrect data';
-        //Execution
-        if (!empty($monsterArray)){
-            $result = false;
-        } else {
-            $result = true;
-        }
+        // Setup
+        $monster = [];
+        $expected = 'string';
 
-        //Assertion
-        $this->assertEquals($expectedResult, $result);
+        // Execution
+
     }
 
 }

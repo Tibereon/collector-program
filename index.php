@@ -38,8 +38,8 @@ $monsterArray = [];
             echo '</div>';
         }
     }
-
 ?>
+
 <html lang="en">
     <head>
         <title>Monster collection</title>

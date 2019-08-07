@@ -1,6 +1,12 @@
 <?php
 require_once 'index.php';
 
-foreach ($monsterArray as $item) {
-    gettype($item['type']);
+function correctsStats($monsterArray){
+    foreach ($monsterArray as $item) {
+        if (array_search('Water', $monsterArray [$strict = FALSE])){
+        echo 'Epic gamer moment';
+        }
+    }
 }
+
+
