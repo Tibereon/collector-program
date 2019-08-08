@@ -1,7 +1,6 @@
 <?php
 
-require './index.php';
-require './functions.php';
+require_once './functions.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,10 +35,11 @@ class IndexTest extends TestCase
     public function test_arrayFormat()
     {
         //Setup
-        $expectedResult = True;
+        $expectedResult = 'Your array is invalid';
         //Execution
-        $testArray = [1, 2 ,3];
-        $result = checkEmpty($testArray);
+        $testMonsters = [['id' => '1', 'Species' => 'Goblin', 'healthpoints' => '16', 'strength' => '10', 'speed' => '16', 'agility' => '14', 'armour' => '2', 'intelligence' => '50', 'element' => 'Earth']
+            , ['id' => '2', 'type' => 'Slime', 'bricks' => '37', 'strength' => '2','speed' => '1', 'agility' => '4', 'armour' => '0', 'intelligence' => '0', 'element' => 'Earth']];
+        $result = createCards($testMonsters);
 
         //Assertion
         $this->assertEquals($expectedResult, $result);

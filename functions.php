@@ -48,7 +48,7 @@ function createCards($monsterArray){
             }
             return $output;
         } else {
-            // array wasn't valid
+            return 'Your array is invalid';
         }
     }
 }
