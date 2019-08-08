@@ -1,26 +1,26 @@
 <?php
 $monsterArray = [];
 
-    $db = new PDO(
-        'mysql:host=192.168.20.20; dbname=collection',
-        'root',
-        ''
-    );
+$db = new PDO(
+    'mysql:host=192.168.20.20; dbname=collection',
+    'root',
+    ''
+);
 
-    $db->setAttribute(
-        PDO::ATTR_DEFAULT_FETCH_MODE,
-        PDO::FETCH_ASSOC
-    );
+$db->setAttribute(
+    PDO::ATTR_DEFAULT_FETCH_MODE,
+    PDO::FETCH_ASSOC
+);
 
-    $idToSearchFor = $_GET;
+$idToSearchFor = $_GET;
 
-    $sql = $db->prepare(
-        'SELECT * FROM `monsters`;'
-    );
+$sql = $db->prepare(
+    'SELECT * FROM `monsters`;'
+);
 
-    $sql->execute();
+$sql->execute();
 
-    $monsterArray = $sql->fetchAll();
+$monsterArray = $sql->fetchAll();
 
     function createCards($monsterArray) {
         foreach($monsterArray as $item) {
