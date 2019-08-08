@@ -23,20 +23,21 @@ $sql->execute();
 $monsterArray = $sql->fetchAll();
 
     function createCards($monsterArray) {
+        $output = "";
         foreach($monsterArray as $item) {
-            echo '<div class="card-container">';
-                echo '<div class="card">';
-                    echo '<div class="card-title">' . $item['type'] . '</div>';
-                    echo '<div class="card-text">Element = '  . $item['element'] . '</div>';
-                    echo '<div class="card-text">Healthpoints = '  . $item['healthpoints'] . '</div>';
-                    echo '<div class="card-text">Strength = '  . $item['strength'] . '</div>';
-                    echo '<div class="card-text">Speed = ' . $item['speed'] . '</div>';
-                    echo '<div class="card-text">Agilty = ' . $item['agility'] . '</div>';
-                    echo '<div class="card-text">Armour = ' . $item['armour'] . '</div>';
-                    echo '<div class="card-text">Intelligence = '  . $item['intelligence'] . '</div>';
-                echo '</div>';
-            echo '</div>';
+            $output .= '<div class="card-container">' .
+                '<div class="card">';
+                    $output .= '<div class="card-title">' . $item['type'] . '</div>' .
+                    '<div class="card-text">Element = '  . $item['element'] . '</div>' .
+                    '<div class="card-text">Healthpoints = '  . $item['healthpoints'] . '</div>' .
+                    '<div class="card-text">Strength = '  . $item['strength'] . '</div>' .
+                    '<div class="card-text">Speed = ' . $item['speed'] . '</div>' .
+                    '<div class="card-text">Armour = ' . $item['armour'] . '</div>' .
+                    '<div class="card-text">Intelligence = '  . $item['intelligence'] . '</div>' .
+                '</div>' .
+           '</div>';
         }
+        echo $output;//Return string variable here after appending elements to the variable. View page source to get correct output.
     }
 ?>
 

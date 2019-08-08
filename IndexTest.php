@@ -10,9 +10,9 @@ class IndexTest extends TestCase
     public function test_hasMonsters()
     {
     //Setup
-        $expectedResult = 'Monsters found!';
+        $expectedResult = 'No monsters to display';
      //Execution
-       $testArray = [1, 2 ,3];
+        $testArray = [1, 2 ,3];
         $result = checkEmpty($testArray);
 
     //Assertion
