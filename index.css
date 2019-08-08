@@ -18,7 +18,7 @@ body {
     text-align: center;
 }
 
-.monsters {
+.monsters-containers {
     border: 1px solid #21CB39;
     overflow: auto;
 }

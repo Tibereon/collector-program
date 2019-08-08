@@ -53,7 +53,7 @@ $monsterArray = [];
                 <h1 class="hero">Monster collection</h1>
             </div>
         </header>
-    <section class="monsters">
+    <section class="monsters-containers">
         <?php createCards($monsterArray) ?>
     </section>
     </body>
