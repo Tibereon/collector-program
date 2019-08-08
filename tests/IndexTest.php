@@ -32,4 +32,16 @@ class IndexTest extends TestCase
         $this->assertEquals($expectedResult, $result);
 
     }
+
+    public function test_arrayFormat()
+    {
+        //Setup
+        $expectedResult = True;
+        //Execution
+        $testArray = [1, 2 ,3];
+        $result = checkEmpty($testArray);
+
+        //Assertion
+        $this->assertEquals($expectedResult, $result);
+    }
 }

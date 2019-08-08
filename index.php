@@ -14,21 +14,19 @@ $db->setAttribute(
     PDO::FETCH_ASSOC
 );
 
-$idToSearchFor = $_GET;
-
 $sql = $db->prepare(
-    'SELECT * FROM `monsters`;'
+    'SELECT `monsters`.`type`,`monsters`.`healthpoints`, `monsters`.`strength`, `monsters`.`speed`
+    , `monsters`.`agility`, `monsters`.`armour`,`monsters`.`intelligence`,`monsters`.`element` FROM `monsters`;'
 );
 
 $sql->execute();
 
 $monsterArray = $sql->fetchAll();
 
-createCards($monsterArray)
-
 ?>
 
-<!DOCTYPE html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Monster collection</title>
         <link rel ="stylesheet" type="text/css" href="normalise.css">
@@ -37,7 +35,7 @@ createCards($monsterArray)
     </head>
     <body>
         <header>
-            <div class="Hero-container">
+            <div class="hero-container">
                 <h1 class="hero">Monster collection</h1>
             </div>
         </header>
