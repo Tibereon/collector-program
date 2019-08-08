@@ -43,6 +43,7 @@ $monsterArray = [];
 <html lang="en">
     <head>
         <title>Monster collection</title>
+        <link rel ="stylesheet" type="text/css" href="normalise.css">
         <link rel ="stylesheet" type="text/css" href="index.css">
         <meta name="viewport contents" content="device-width, initial-scale=1.0">
     </head>
