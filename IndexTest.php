@@ -7,29 +7,15 @@ use PHPUnit\Framework\TestCase;
 
 class IndexTest extends TestCase
 {
-    public function testMonsterArray_hasMonsters()
+    public function testMonsterArray_hasMonsters($testArray)
     {
     //Setup
-        $expectedResult =  true;
+        $expectedResult = 'Monsters found!';
      //Execution
-        if (!empty($monsterArray)){
-            $result = false;
-        } else {
-            $result = true;
-        }
+        $result = checkEmpty($testArray);
 
     //Assertion
         $this->assertEquals($expectedResult, $result);
-    }
-
-    public function testMonsters_hasValues()
-    {
-        // Setup
-        $monster = [];
-        $expected = 'string';
-
-        // Execution
-
     }
 
 }
