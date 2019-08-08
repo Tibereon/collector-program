@@ -1,7 +1,7 @@
 <?php
 
 require './index.php';
-require './indexTestFunctions.php';
+require './functions.php';
 
 use PHPUnit\Framework\TestCase;
 
