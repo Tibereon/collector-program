@@ -37,8 +37,9 @@ $monsterArray = $sql->fetchAll();
                 '</div>' .
            '</div>';
         }
-        echo $output;//Return string variable here after appending elements to the variable. View page source to get correct output.
+        return $output;//Return string variable here after appending elements to the variable. View page source to get correct output.
     }
+        
 ?>
 
 <html lang="en">
@@ -55,7 +56,7 @@ $monsterArray = $sql->fetchAll();
             </div>
         </header>
     <section class="monsters-containers">
-        <?php createCards($monsterArray) ?>
+        <?php echo createCards($monsterArray) ?>
     </section>
     </body>
 </html>

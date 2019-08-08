@@ -3,9 +3,9 @@ require_once 'index.php';
 
 function checkEmpty($testArray){
     if (empty($testArray)){
-        return 'Monsters found!';
+        return 'Array empty!';
     } else {
-        return 'No monsters to display';
+        return 'Items in array';
     }
 }
 
