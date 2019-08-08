@@ -49,7 +49,7 @@ $monsterArray = [];
     <body>
         <header>
             <div class="Hero-container">
-                <h1 class="Hero">Monster collection</h1>
+                <h1 class="hero">Monster collection</h1>
             </div>
         </header>
     <section class="monsters">
