@@ -44,17 +44,4 @@ class IndexTest extends TestCase
         //Assertion
         $this->assertEquals($expectedResult, $result);
     }
-
-    public function test_arrayDataTypes()
-    {
-        //Setup
-        $expectedResult = 'Your array is invalid';
-        //Execution
-        $testMonsters = [['id' => '1', 'type' => '9', 'healthpoints' => 'lots', 'strength' => '10', 'speed' => '16', 'agility' => '14', 'armour' => '2', 'intelligence' => '50', 'element' => 'Earth']
-            , ['id' => '2', 'type' => 'Slime', 'healthpoints' => '37', 'strength' => '2','speed' => '1', 'agility' => '4', 'armour' => '0', 'intelligence' => '0', 'element' => 'Earth']];
-        $result = createCards($testMonsters);
-
-        //Assertion
-        $this->assertEquals($expectedResult, $result);
-    }
 }

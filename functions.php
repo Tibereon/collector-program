@@ -21,14 +21,14 @@ function createCards($monsterArray){
     $isArrayValid = false;
     foreach ($monsterArray as $item) {
         if (
-            array_key_exists('type', $item) && is_string ($item)
-            && array_key_exists('element', $item) && is_string ($item)
-            && array_key_exists('healthpoints', $item) && is_int($item)
-            && array_key_exists('strength', $item) && is_int($item)
-            && array_key_exists('speed', $item) && is_int($item)
-            && array_key_exists('agility', $item) && is_int($item)
-            && array_key_exists('armour', $item) && is_int($item)
-            && array_key_exists('intelligence', $item) && (is_int($item))
+            array_key_exists('type', $item)
+            && array_key_exists('element', $item)
+            && array_key_exists('healthpoints', $item)
+            && array_key_exists('strength', $item)
+            && array_key_exists('speed', $item)
+            && array_key_exists('agility', $item)
+            && array_key_exists('armour', $item)
+            && array_key_exists('intelligence', $item)
         ) {
             $isArrayValid = true;
         }
